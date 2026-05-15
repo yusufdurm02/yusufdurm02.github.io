@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 2 — CSS Temel Ödevi</title>
+  <style>
+
+    /* ===== RESET ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== GRUP SEÇİCİ ===== */
+    h1, h2, p {
+      line-height: 1.6;
+    }
+
+    body {
+      background: #e8eef8;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* ===== ANA KART ===== */
+    .sayfa-karti {
+      margin-top: 0.5rem;
+      background: #fff;
+      border: 1.5px solid #b8cce8;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 780px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      animation: asagiDus 0.5s ease both;
+    }
+
+    @keyframes asagiDus {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 1.4rem;
+      border-bottom: 1.5px solid #d0ddf0;
+    }
+
+    .nav-logo {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2d3748;
+      text-decoration: none;
+    }
+
+    /* ul > li > a — display: inline-block ile yatay menü */
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    /* Hiyerarşik seçici 1 */
+    nav ul li a {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #4a5568;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav ul li a.aktif {
+      background: #1e3a8a;
+      color: #fff;
+    }
+
+    /* Hover efekti */
+    nav ul li a:hover {
+      color: #2563eb;
+    }
+
+    /* ===== HEADER METNİ ===== */
+    .aciklama {
+      padding: 1.2rem 1.4rem;
+      border-bottom: 1.5px solid #d0ddf0;
+    }
+
+    /* Hiyerarşik seçici 2 */
+    .aciklama p {
+      font-size: 0.88rem;
+      color: #4a5568;
+      line-height: 1.75;
+    }
+
+    .aciklama p span {
+      color: #2563eb;
+    }
+
+    /* ===== İKİ SÜTUN ===== */
+    .iki-sutun {
+      display: flex;
+      gap: 1rem;
+      padding: 1.2rem 1.4rem;
+    }
+
+    /* ===== SOL KUTU — sarı ===== */
+    .icerik-kutu {
+      flex: 1;
+      background: #fffbeb;
+      border: 1.5px solid #f0d88a;
+      border-radius: 8px;
+      padding: 1.1rem 1.3rem;
+      animation: soldan 0.6s ease 0.15s both;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .icerik-kutu:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(240,180,0,0.15);
+    }
+
+    @keyframes soldan {
+      from { opacity: 0; transform: translateX(-18px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .icerik-kutu h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Hiyerarşik seçici 3 */
+    .icerik-kutu p {
+      font-size: 0.85rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 0.65rem;
+    }
+
+    /* ===== SAĞ KUTU — mavi ===== */
+    .yan-menu-kutu {
+      flex: 1;
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 1.1rem 1.3rem;
+      animation: sagdan 0.6s ease 0.25s both;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .yan-menu-kutu:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(30,80,180,0.15);
+    }
+
+    @keyframes sagdan {
+      from { opacity: 0; transform: translateX(18px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .yan-menu-kutu h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 0.8rem;
+    }
+
+    .yan-menu-kutu p {
+      font-size: 0.85rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 0.65rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #f0f4fc;
+      border-top: 1.5px solid #d0ddf0;
+      text-align: center;
+      padding: 0.85rem;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+  </style>
+  <link rel="stylesheet" href="../hafta1/style.css" />
+</head>
+<body>
+
+  <a href="../hafta1/labs.html" class="btn-geri-don" style="position:fixed;top:1.2rem;left:1.2rem;z-index:999;">Geri Dön</a>
+
+  <div class="sayfa-karti">
+
+    <!-- NAV: ul > li > a, display: inline-block ile yatay -->
+    <nav>
+      <a href="../hafta1/index.html" class="nav-logo">CSS Temel Ödevi</a>
+      <ul>
+        <li><a href="../hafta1/index.html" class="aktif">Ana Sayfa</a></li>
+        <li><a href="../hafta1/about.html">Hakkında</a></li>
+        <li><a href="../hafta1/interests.html">Hizmetler</a></li>
+        <li><a href="../hafta1/contact.html">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <!-- AÇIKLAMA METNİ -->
+    <div class="aciklama">
+      <p>
+        Verilen benzer bir düzenle basit bir web sayfası oluşturun. CSS'in temel özelliklerini
+        (<span>display, width, height, margin, padding, border,</span> selector) uygulayın.
+        Sadece HTML5 + CSS3 kullanın, hazır framework kullanmak yasak (Bootstrap, Tailwind vb.).
+      </p>
+    </div>
+
+    <!-- İKİ SÜTUN -->
+    <div class="iki-sutun">
+
+      <div class="icerik-kutu">
+        <h2>İçerik</h2>
+        <p>
+          Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle bu metinler arasında
+          <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlelleririz.
+        </p>
+        <p>
+          Önce CSS ile kutuları / alanları yan yana getirmeyi, ardından alt alta yerleştirmeyi
+          öğrendik. Şimdi ise CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı
+          göreceğiz.
+        </p>
+      </div>
+
+      <div class="yan-menu-kutu">
+        <h2>Yan Menü / Bilgi</h2>
+        <p>
+          Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), yükseklik (height),
+          kenar boşlukları (margin/padding) ve kenarlık (border) özelliklerini kullanarak
+          düzenleyebiliriz.
+        </p>
+        <p>
+          Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil
+          verebiliriz.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
