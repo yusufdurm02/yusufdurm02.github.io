@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Öğrenci Not Hesaplama</title>
+  <link rel="stylesheet" href="styles/uygulama1.css" />
+</head>
+<body>
+
+  <a class="btn-geri" href="../hafta1/labs.html">Geri Dön</a>
+
+  <div class="app-card">
+    <h2>Öğrenci Not Hesaplama</h2>
+
+    <div class="form-group">
+      <label for="adSoyad">Ad Soyad</label>
+      <input type="text" id="adSoyad" placeholder="Örn: Yusuf Durmuş" />
+    </div>
+
+    <div class="form-group">
+      <label for="vize">Vize Notu (0 – 100)</label>
+      <input type="text" id="vize" placeholder="Örn: 70" />
+    </div>
+
+    <div class="form-group">
+      <label for="final">Final Notu (0 – 100)</label>
+      <input type="text" id="final" placeholder="Örn: 80" />
+      <p class="error-msg" id="errorMsg">
+        Lütfen tüm alanları doğru doldurunuz (notlar 0–100 arasında olmalıdır).
+      </p>
+    </div>
+
+    <button class="btn-hesapla" onclick="hesapla()">Hesapla</button>
+
+    <div class="result-box" id="resultBox">
+      <p class="res-name" id="resName"></p>
+      <p class="res-row">Ortalama: <span id="resOrtalama"></span></p>
+      <p class="res-row">Harf Notu: <span id="resHarf"></span></p>
+      <p class="res-row">Durum: <span id="resDurum"></span></p>
+    </div>
+  </div>
+
+  <script src="scripts/uygulama1.js"></script>
+
+</body>
+</html>
