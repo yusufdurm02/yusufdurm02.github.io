@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratuvar Ana Sayfası</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #e8eef8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .hub-card {
+      background: #fff;
+      border-radius: 20px;
+      border: 1.5px solid #e2e8f0;
+      padding: 2.8rem 2.5rem 2.5rem;
+      box-shadow: 0 4px 32px rgba(30,64,175,0.07);
+      width: 100%;
+      max-width: 820px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 0.8rem;
+    }
+
+    .desc {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-bottom: 2.2rem;
+    }
+
+    .btn-primary {
+      padding: 0.7rem 1.8rem;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); color: #fff; text-decoration: none; }
+
+    .btn-secondary {
+      padding: 0.7rem 1.8rem;
+      background: #fff;
+      color: #334155;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: #f1f5f9; color: #334155; text-decoration: none; }
+
+    /* Hafta grid */
+    .hafta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .hafta-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      max-width: 75%;
+      margin: 0 auto;
+    }
+
+    .hafta-kart {
+      display: block;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.1rem 1rem;
+      text-decoration: none;
+      color: #1e293b;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .hafta-kart:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.12);
+      border-color: #93c5fd;
+      text-decoration: none;
+    }
+
+    .hafta-no {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 0.2rem;
+    }
+
+    .hafta-baslik {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 0.3rem;
+    }
+
+    .hafta-aciklama {
+      font-size: 0.75rem;
+      color: #64748b;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hub-card">
+    <span class="badge">Web Programlama Dersi</span>
+    <h1>Laboratuvar Ana Sayfası</h1>
+    <p class="desc">Bu sayfa GitHub Pages üzerinde yayınlanan laboratuvar uygulamalarına giriş için<br>hazırlanmıştır. Aşağıdaki butondan hafta 7 uygulamasına geçebilirsiniz.</p>
+
+    <div class="btn-group">
+      <a href="hafta7.html" class="btn-primary">Hafta 7 Uygulamasına Git</a>
+      <a href="../hafta1/labs.html" class="btn-secondary">Diğer Haftalar</a>
+    </div>
+
+    <!-- Üst 4 kart -->
+    <div class="hafta-grid">
+      <a href="../hafta1/index.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 1</div>
+        <div class="hafta-baslik">GitHub Pages</div>
+        <p class="hafta-aciklama">Kişisel tanıtım sayfası, HTML yapısı.</p>
+      </a>
+      <a href="../hafta2/index.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 2</div>
+        <div class="hafta-baslik">HTML + CSS</div>
+        <p class="hafta-aciklama">Yatay menü, iki sütunlu düzen.</p>
+      </a>
+      <a href="../hafta3/index.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 3</div>
+        <div class="hafta-baslik">Form Yapıları</div>
+        <p class="hafta-aciklama">CSS box model, iletişim formu.</p>
+      </a>
+      <a href="../hafta4/index.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 4</div>
+        <div class="hafta-baslik">Flexbox</div>
+        <p class="hafta-aciklama">Tam 100vh düzeni, flex-grow.</p>
+      </a>
+    </div>
+
+    <!-- Alt 3 kart -->
+    <div class="hafta-grid-bottom">
+      <a href="../hafta5/lab-position.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 5</div>
+        <div class="hafta-baslik">Position</div>
+        <p class="hafta-aciklama">relative, absolute, fixed.</p>
+      </a>
+      <a href="../hafta6/index.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 6</div>
+        <div class="hafta-baslik">JavaScript</div>
+        <p class="hafta-aciklama">Not hesaplama & birim dönüştürücü.</p>
+      </a>
+      <a href="hafta7.html" class="hafta-kart">
+        <div class="hafta-no">Hafta 7</div>
+        <div class="hafta-baslik">Bootstrap + JavaScript</div>
+        <p class="hafta-aciklama">Etkinlik kayıt sayfası.</p>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Yusuf Durmuş (170423965) | Web Programlama Dersi</p>
+  </footer>
+
+</body>
+</html>
