@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 6 — JavaScript Uygulamaları</title>
+  <link rel="stylesheet" href="../hafta1/style.css" />
+  <style>
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .app-grid { grid-template-columns: 1fr; }
+    }
+
+    .app-kart {
+      display: block;
+      background: #f0f4ff;
+      border: 1.5px solid #c7d8f8;
+      border-radius: 14px;
+      padding: 2rem 1.8rem;
+      text-decoration: none;
+      color: #1e293b;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      animation: kartGel 0.5s ease both;
+    }
+
+    .app-kart:nth-child(1) { animation-delay: 0.05s; }
+    .app-kart:nth-child(2) { animation-delay: 0.15s; }
+
+    .app-kart:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(37,99,235,0.18);
+      border-color: #2563eb;
+      text-decoration: none;
+      color: #1e293b;
+    }
+
+    .app-no {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2563eb, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.7rem;
+    }
+
+    .app-baslik {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 0.4rem;
+    }
+
+    .app-aciklama {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .app-ok {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="kapsayici">
+
+    <header>
+      <h1>Hafta 6 — JavaScript Uygulamaları</h1>
+      <p>Not Hesaplama · Birim Dönüştürücü</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../hafta1/index.html">Ana Sayfa</a></li>
+        <li><a href="../hafta1/about.html">Hakkımda</a></li>
+        <li><a href="../hafta1/interests.html">İlgi Alanlarım</a></li>
+        <li><a href="../hafta1/contact.html">İletişim</a></li>
+        <li><a href="../hafta1/labs.html">Lab Ödevlerim</a></li>
+        <li><a href="../hafta3/index.html">İletişim Formu</a></li>
+      </ul>
+    </nav>
+
+    <section class="kart">
+      <h2>Uygulamalar</h2>
+      <div class="app-grid">
+
+        <a href="uygulama1.html" class="app-kart">
+          <div class="app-no">01</div>
+          <div class="app-baslik">Öğrenci Not Hesaplama</div>
+          <p class="app-aciklama">Ad Soyad, vize ve final notunu gir — ortalama, harf notu ve geçti/kaldı durumunu hesapla.</p>
+          <span class="app-ok">Uygulamaya Git →</span>
+        </a>
+
+        <a href="uygulama2.html" class="app-kart">
+          <div class="app-no">02</div>
+          <div class="app-baslik">Birim Dönüştürücü</div>
+          <p class="app-aciklama">Sıcaklık, uzunluk ve kütle birimlerini birbirine dönüştür.</p>
+          <span class="app-ok">Uygulamaya Git →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Yusuf Durmuş (170423965) | Web Programlama Dersi</p>
+    </footer>
+
+  </div>
+</body>
+</html>
