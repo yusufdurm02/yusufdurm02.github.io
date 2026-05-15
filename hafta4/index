@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 4 — Flexbox Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="../hafta1/labs.html" class="btn-geri-back" style="position:fixed;top:1.2rem;left:1.2rem;z-index:999;">← Geri Dön</a>
+
+  <div class="wrapper">
+
+    <!-- 1) NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-top">
+        <div class="logo"></div>
+        <ul class="nav-links">
+          <li><a href="../hafta1/index.html">Ana Sayfa</a></li>
+          <li><a href="../hafta1/about.html">Hakkımda</a></li>
+          <li><a href="../hafta1/interests.html">İlgi Alanlarım</a></li>
+          <li><a href="../hafta1/contact.html">İletişim</a></li>
+          <li><a href="../hafta1/labs.html">Lab Ödevlerim</a></li>
+        </ul>
+      </div>
+      <div class="section-tags">
+        <span class="tag">flex layout</span>
+        <span class="tag">justify-content</span>
+        <span class="tag">flex layout</span>
+        <span class="tag">10vh height</span>
+        <span class="tag">100vw width</span>
+      </div>
+    </nav>
+
+    <!-- 2) HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Hero Başlık</h1>
+          <p>Açıklama metni</p>
+          <button class="btn">Buton</button>
+        </div>
+        <div class="hero-image">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="140" fill="#e0e0e0"/>
+            <polygon points="40,115 100,45 160,115" fill="#b0b0b0"/>
+            <circle cx="155" cy="42" r="22" fill="#c8c8c8"/>
+          </svg>
+        </div>
+      </div>
+      <div class="section-tags">
+        <span class="tag">flex-direction: <span class="tag-val">row</span></span>
+        <span class="tag">height: 30vh</span>
+        <span class="tag">align-items: <span class="tag-val">stretch</span></span>
+      </div>
+    </section>
+
+    <!-- 3) KARTLAR BÖLÜMÜ -->
+    <section class="cards-section">
+      <div class="cards-header">
+        <h2>Kartlar Bölümü</h2>
+        <div class="header-tags">
+          <span class="tag">multiple items</span>
+          <span class="tag">flex layout – wrap</span>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="card"><h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="btn">Buton</button></div>
+        <div class="card"><h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="btn">Buton</button></div>
+        <div class="card"><h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="btn">Buton</button></div>
+        <div class="card"><h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="btn">Buton</button></div>
+        <div class="card"><h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="btn">Buton</button></div>
+        <div class="card"><h3>Kart Başlığı</h3><p>Kısa açıklama</p><button class="btn">Buton</button></div>
+      </div>
+      <div class="section-tags">
+        <span class="tag">flex-direction</span>
+        <span class="tag">flex layout + wrap</span>
+        <span class="tag">gap + align/hizalama</span>
+        <span class="tag">height: iç 30vh</span>
+      </div>
+    </section>
+
+    <!-- 4) FLEX GROW UYGULAMA -->
+    <section class="flex-grow-section">
+      <div class="cards-header">
+        <h2>Flex Grow Uygulama</h2>
+        <div class="header-tags">
+          <span class="tag">flex-grow:</span>
+          <span class="tag">height: 20vh</span>
+          <span class="tag">stretch (esneme)</span>
+        </div>
+      </div>
+      <div class="grow-container">
+        <div class="box box-1">
+          <strong>1 Kutu</strong>
+          <span>flex-grow: 1;</span>
+          <button class="btn btn-blue">Buton</button>
+        </div>
+        <div class="box box-2">
+          <strong>2 Kutu</strong>
+          <span>flex-grow: 2;</span>
+          <button class="btn btn-green">Buton</button>
+        </div>
+        <div class="box box-3">
+          <strong>3 Kutu</strong>
+          <span>flex-grow: 1;</span>
+          <button class="btn btn-orange">Buton</button>
+        </div>
+      </div>
+      <div class="section-tags">
+        <span class="tag">multiple items</span>
+        <span class="tag">flex layout + wrap</span>
+        <span class="tag">gap + align/hizalama</span>
+      </div>
+    </section>
+
+    <!-- 5) FLEX GROW UYGULAMA - BUTONSUZ -->
+    <section class="flex-grow-section">
+      <div class="cards-header">
+        <h2>Flex Grow Uygulama</h2>
+        <div class="header-tags">
+          <span class="tag">flex-grow:</span>
+          <span class="tag">height: 20vh</span>
+          <span class="tag">stretch (esneme)</span>
+        </div>
+      </div>
+      <div class="grow-container">
+        <div class="box box-1"><strong>1 Kutu</strong><span>flex-grow: 1;</span></div>
+        <div class="box box-2"><strong>2 Kutu</strong><span>flex-grow: 2;</span></div>
+        <div class="box box-3"><strong>3 Kutu</strong><span>flex-grow: 1;</span></div>
+      </div>
+      <div class="section-tags">
+        <span class="tag">flex-grow</span>
+        <span class="tag">height: 20vh</span>
+        <span class="tag">stretch (esneme)</span>
+      </div>
+    </section>
+
+    <!-- 6) FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2026 – Flexbox Lab Uygulaması &nbsp;|&nbsp; <a href="../hafta1/labs.html">Lab Ödevlerim</a></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
